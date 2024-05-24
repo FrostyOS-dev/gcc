@@ -1175,6 +1175,12 @@ case ${target} in
   *) ;;
   esac
   ;;
+*-*-worldos*)
+  gas=yes
+  gnu_ld=yes
+  default_use_cxa_atexit=yes
+  use_gcc_stdint=provide
+  ;;
 esac
 
 # Figure out if we need to enable heap trampolines by default
@@ -1931,6 +1937,15 @@ i[34567]86-*-elfiamcu)
 	;;
 i[34567]86-*-elf*)
 	tm_file="${tm_file} i386/unix.h i386/att.h elfos.h newlib-stdint.h i386/i386elf.h"
+	;;
+i[34567]86-*-worldos*)
+	tm_file="${tm_file} i386/att.h elfos.h newlib-stdint.h i386/i386elf.h worldos.h i386/worldos.h"
+	native_system_header_dir="/data/include"
+	;;
+x86_64-*-worldos*)
+	tmake_file="${tmake_file} i386/t-x86_64-elf"
+	tm_file="${tm_file} i386/att.h elfos.h newlib-stdint.h i386/i386elf.h i386/x86-64.h worldos.h i386/worldos.h"
+	native_system_header_dir="/data/include"
 	;;
 x86_64-*-elf*)
 	tm_file="${tm_file} i386/unix.h i386/att.h elfos.h newlib-stdint.h i386/i386elf.h i386/x86-64.h"

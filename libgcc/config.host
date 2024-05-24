@@ -749,6 +749,14 @@ x86_64-*-elf* | x86_64-*-rtems*)
 	    ;;
 	esac
 	;;
+i[34567]86-*-worldos*)
+	extra_parts="$extra_parts crti.o crtbegin.o crtend.o crtn.o"
+	tmake_file="$tmake_file i386/t-crtstuff t-crtstuff-pic t-libgcc-pic"
+	;;
+x86_64-*-worldos*)
+	extra_parts="$extra_parts crti.o crtbegin.o crtend.o crtn.o"
+	tmake_file="$tmake_file i386/t-crtstuff t-crtstuff-pic t-libgcc-pic"
+	;;
 x86_64-*-fuchsia*)
 	tmake_file="$tmake_file t-libgcc-pic"
 	;;
