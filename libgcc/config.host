@@ -749,11 +749,11 @@ x86_64-*-elf* | x86_64-*-rtems*)
 	    ;;
 	esac
 	;;
-i[34567]86-*-worldos*)
+i[34567]86-*-frostyos*)
 	extra_parts="$extra_parts crti.o crtbegin.o crtend.o crtn.o"
 	tmake_file="$tmake_file i386/t-crtstuff t-crtstuff-pic t-libgcc-pic"
 	;;
-x86_64-*-worldos*)
+x86_64-*-frostyos*)
 	extra_parts="$extra_parts crti.o crtbegin.o crtend.o crtn.o"
 	tmake_file="$tmake_file i386/t-crtstuff t-crtstuff-pic t-libgcc-pic"
 	;;

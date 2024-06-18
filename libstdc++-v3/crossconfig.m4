@@ -9,7 +9,7 @@ case "${host}" in
     # This is a freestanding configuration; there is nothing to do here.
     ;;
 
-  *-worldos*)
+  *-frostyos*)
     GLIBCXX_CHECK_COMPILER_FEATURES
     GLIBCXX_CHECK_LINKER_FEATURES
     GLIBCXX_CHECK_MATH_SUPPORT

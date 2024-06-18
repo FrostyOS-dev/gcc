@@ -11,8 +11,8 @@ target=fixinc.sh
 
 # Check for special fix rules for particular targets
 case $machine in
-    *-worldos* | \
-    *-*-worldos* | \
+    *-frostyos* | \
+    *-*-frostyos* | \
     i?86-*-cygwin* | \
     i?86-*-mingw32* | \
     x86_64-*-mingw32* | \

@@ -1,5 +1,5 @@
-#undef TARGET_WORLDOS
-#define TARGET_WORLDOS 1
+#undef TARGET_FROSTYOS
+#define TARGET_FROSTYOS 1
 
 #undef LIB_SPEC
 #define LIB_SPEC "-lc" /* link against C standard library */
@@ -14,8 +14,8 @@
 #define TARGET_OS_CPP_BUILTINS()          \
   do                                      \
     {                                     \
-      builtin_define ("__worldos__");     \
-      builtin_assert ("system=worldos");  \
+      builtin_define ("__frostyos__");     \
+      builtin_assert ("system=frostyos");  \
     }                                     \
   while (0);
 
